@@ -14,7 +14,7 @@
       </header>
       <div class="card">
         <div class="card-header">
-          <h2>Generate a Password</h2>
+          <h2 class="password-display" id="passwordDisplay">Generate a Password</h2>
         </div>
         <div class="card-body">
           <textarea
@@ -24,9 +24,15 @@
             aria-label="Generated Password"
           ></textarea>
         </div>
+        <form id="passwordGeneratorForm" class="form">
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+          <button id="generate" class="btn">XXXX</button>
         </div>
+        <div class="character-amount-container">
+          <input type="range" min="1" max="50" value="10" id="characterAmountRange">
+          <input class="number-input" type="number" min="1" max="50" value="10" id="characterAmountNumber">
+        </div>
+        </form>
       </div>
     </div>
     <script src="script.js"></script>
