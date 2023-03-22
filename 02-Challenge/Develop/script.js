@@ -1,40 +1,31 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var characterAmountNumber = document.getElementById('characterAmountNumber')
-const form = document.getElementById('passwordGeneratorForm')
-
-var LOWERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122)
-
-
-form.addEventListener("click", e => {
-  e.preventDefault()
-  var characterAmount = characterAmountNumber.value
-  var password = writePassword(characterAmount)
-  passwordDisplay.innerText = password
-})
-
 // Write password to the #password input
-function writePassword(characterAmount) {
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-  let charCodes = LOWERCASE_CHAR_CODES
-  
-  var passwordCharacters = []
-  for (let i = 0; i < characterAmount; i++) {
-    var characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
-    passwordCharacters.push(String.fromCharCode(characterCode))
-  }
-  return passwordCharacters.join('')
+  passwordText.value = password;
+
 }
-
-  function arrayFromLowToHigh(low, high) {
-    const array = []
-    for (let i = low; i <= high; i++) {
-      array.push(i)
-    }
-    return array
-  }
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+function generatePassword() {
+
+  var NumbersQ= confirm("include numbers?")
+  var SymbolsQ= confirm("include Sym?")
+  var UppercaseQ= confirm("include UC?")
+  var LowercaseQ= confirm("include LC?")
+
+    var passwordCharacters = []
+  for (let i = 0; i < characterAmount; i++) {
+    var characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
+    passwordCharacters.push(String.fromCharCode(characterCode))
+
+}
+}
+
